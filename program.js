@@ -1,6 +1,7 @@
 var express = require("express");
 var mongo = require('mongodb').MongoClient;
 var cors = require("cors");
+require("dotenv").config(); //ovo je neophodno da bih mogao sakriti varijable unutar stringa
 var url =`mongodb://${process.env.USERNAME}:${process.env.PASSWOURD}@ds125914.mlab.com:25914/urls`;
 var apiKey = process.env.APIKEY;
 var idEngine = process.env.ENGINEID;
