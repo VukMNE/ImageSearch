@@ -1,0 +1,30 @@
+{
+  "name": "imagesearch",
+  "version": "1.0.0",
+  "description": "Image Search Abstraction Layer - Free Code Camp Backend challenge",
+  "main": "program.js",
+  "scripts": {
+    "start": "node program.js",
+    "test": "node program.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VukMNE/ImageSearch.git"
+  },
+  "keywords": [
+    "Image",
+    "Search"
+  ],
+  "author": "vukmne",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VukMNE/ImageSearch/issues"
+  },
+  "homepage": "https://github.com/VukMNE/ImageSearch#readme",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "google-search": "0.0.5",
+    "mongodb": "^3.0.1"
+  }
+}
