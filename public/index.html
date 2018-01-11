@@ -1,0 +1,74 @@
+<html>
+
+	<head>
+		<title>Image Search</title>
+		<link rel="stylesheet" href="style.css"></link>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"></link>
+	</head>
+	
+	<body>
+		<div class="container-fluid">
+			<div class="text-center">
+				<h2>Image Search</h2>
+			</div>
+			<div class="form-container text-center">
+				<form>
+					<input id="queryString" class="searchbar" type="text" placeholder="Type here to search"/>
+					<input class="btn-search" type="button" value="Search" onclick="redirect();"/><br/>
+					<label for="#offset">Start from results page: </label>
+					<select id="offset">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="5">5</option>
+						<option value="10">10</option>
+						<option value="50">50</option>
+						<option value="100">100</option>
+					</select>
+				</form>
+			</div>
+			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+				<p>
+					This page allows you to search for images using Google Custom Search API
+				</p>
+				<p>
+					Search can be done through our search field or directly from the address bar. Use whichever way is more convienient for you.
+				</p>
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">Examples of direct address bar use
+				<div>
+					<img src="img/search.png"></img>
+				</div>
+				<div>
+					<text>You can see latest queries here - ></text> <button onclick="latestSearches();"><b>Latest queries</b></button>
+					<p>Latest search address-bar-use <i class="fa fa-arrow-down" style="font-size: 1.5em;"></i></a></p>
+					<img src="img/latestSearches.png"></img>
+				</div>
+			</div>
+			
+			<div class="down-under col-xs-6 col-sm-6 col-md-6 col-lg-6">
+			 For GitHub Project click here - > <a href="https://github.com/VukMNE/ImageSearch"><i class="fa fa-github"></i></a>
+			</div><br/>
+			<div class="down-under col-xs-7 col-sm-7 col-md-7 col-lg-7">
+			 For FreeCodeCamp challenge, click here - > <a href="https://www.freecodecamp.org/challenges/image-search-abstraction-layer"><i class="fa fa-free-code-camp"></i></a>
+			</div>
+		</div>
+		<script>
+		var currHref = window.location.href;		
+		function redirect(){
+			var queryString = document.getElementById("queryString").value;
+			var offset = document.getElementById("offset").value;
+			window.location.href = currHref + "search/" + queryString + "?offset=" + offset;
+		}
+		
+		function latestSearches(){
+			window.location.href = currHref + "searches";
+		}
+		
+		
+		
+		</script>
+	</body>
+</html>
